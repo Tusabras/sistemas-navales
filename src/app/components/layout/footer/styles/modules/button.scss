@@ -1,0 +1,40 @@
+/*--------------------------------------------
+Description button
+--------------------------------------------*/
+
+.description-button {
+  font-family: Book;
+  z-index: 1;
+  font-size: 18px;
+  color: #000;
+  position: relative;
+  margin-top: 64px;
+  display: inline-block;
+  // align-self: flex-end;
+  transition: transform 1s ease-in;
+
+  &:hover:after {
+    transform: scaleX(0);
+  }
+
+  &:after {
+    content: '';
+    width: 49px;
+    height: 2px;
+    position: absolute;
+    left: -79px;
+    bottom: 10px;
+    background-color: #2b2b2b;
+
+    transform: scaleX(1);
+    transition: all 0.4s ease-in-out;
+    transform-origin: right;
+  }
+}
+
+.experience {
+  .description-button {
+    margin-left: 350px;
+    z-index: 1;
+  }
+}

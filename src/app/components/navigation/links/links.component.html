@@ -1,0 +1,33 @@
+<div #container class="container" [ngClass]="componentState.mobileView ? 'mobileView' : '' ">
+  <div class="wrap">
+
+    <a routerLink='/' class="logotype">Sistemas Navales</a>
+    <!-- <a routerLink='/' class="logotype">Sistemas navales</a> -->
+    <div class="controls" (mouseover)="interactionRestyle.clearTimer()" (mouseout)="interactionRestyle.Off()">
+      <div #links class="links" [ngClass]="componentState.linksVisible ? 'linksVisible' : 'linksHidden'">
+        <a class='link' routerLink='/charters-in-spain' routerLinkActive='active'>Reparaciones en España</a>
+        <!-- <a class='link' routerLink='/charters-in-spain' routerLinkActive='active'>Destinations</a>
+        <a class='link' routerLink='/beers' routerLinkActive='active'>Events</a>
+        <a class='link' routerLink='/security' routerLinkActive='active'>Deals</a>
+        <a class='link' routerLink='/security' routerLinkActive='active'>Toys</a> -->
+        <a class='link' routerLink='/about' routerLinkActive='active'>Sobre nosotros</a>
+        <a class='link' [ngClass]="componentState.compassVisible ? 'moreMargin' : ''" routerLink='/contact' routerLinkActive='active'>Contacto</a>
+      </div>
+
+      <div class='compass'
+           [ngClass]="[componentState.compassInverted ? 'compassBlack' : 'compassWhite', componentState.mobileView ? 'compassHide' : '']"
+           [ngStyle]="{display: componentState.compassVisible ? 'inline-block' : 'none'}"
+           (click)='interactionRestyle.On()'></div>
+           <!-- (mouseover)="mouseover()" -->
+      <div class='cross'
+           [ngStyle]="{display: componentState.mobileView ? 'inline-block' : 'none'}"
+           (click)='interactionRestyle.instantOff()'></div>
+    </div>
+
+  </div>
+  <div class="background">
+    <div class="shadow"></div>
+    <div class="color"></div>
+  </div>
+
+</div>

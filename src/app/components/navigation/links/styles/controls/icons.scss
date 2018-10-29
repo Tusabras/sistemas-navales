@@ -1,0 +1,60 @@
+@import '../../../../../../assets/sass/mixins.scss';
+
+/*------------------------------------------
+Compass
+------------------------------------------*/
+
+.compass {
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.compassHide {
+  display: none !important;
+}
+
+
+
+/*------------------------------------------
+Colors
+------------------------------------------*/
+
+.compassWhite {
+  background-image: url('/assets/icons/navigation/compass-white.svg');
+}
+
+.compassBlack {
+  background-image: url('/assets/icons/navigation/compass-black.svg');
+}
+
+
+
+/*------------------------------------------
+Cross
+------------------------------------------*/
+
+.cross {
+  width: 30px;
+  height: 30px;
+  background-image: url('/assets/icons/navigation/cross.svg');
+  background-size: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /**** Phone ****/
+  @include phone {
+    position: relative;
+    z-index: 1;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    position: relative;
+    z-index: 1;
+  }
+}

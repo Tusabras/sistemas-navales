@@ -1,0 +1,98 @@
+@import '../../../../../../assets/sass/mixins.scss';
+
+/*-------------------------------------------
+Content
+-------------------------------------------*/
+
+.content {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+
+  /**** Phone ****/
+  @include phone {
+    margin-top: 80vh;
+    align-items: center;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    margin-top: 80vh;
+    align-items: center;
+    text-align: center;
+  }
+
+  /**** Desktop ****/
+  @include desktop {
+   flex-direction: row;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  &Background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #fffefd;
+    top: 0;
+    left: 0;
+
+
+    /**** Phone ****/
+    @include phone {
+      clip-path: polygon(0 0, 100% 1px, 100% 100%, 0% 100%); }
+
+    /**** Tablet Portrait ****/
+    @include tablet-portrait {
+      clip-path: polygon(0 0, 100% 3px, 100% 100%, 0% 100%); }
+
+    /**** Tablet Portrait ****/
+    @include tablet-landscape {
+      clip-path: polygon(0 0, 100% 5px, 100% 100%, 0% 100%); }
+
+    /**** Tablet Portrait ****/
+    @include desktop {
+      background-image: url('/assets/images/contact/shadow.png');
+      background-size: 100% 100%;
+      background-position: 100% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+
+/*---------------------
+Flex Column
+----------------------*/
+
+.content-column {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /**** Desktop ****/
+  @include desktop {
+    width: 50%;
+    max-width: 500px;
+    align-items: left;
+
+    &:last-of-type {
+      justify-content: space-around;
+      align-items: unset;
+    }
+  }
+
+  /**** Desktop Large ****/
+  @include desktop-large {
+    &:last-of-type {
+      // margin-right: 10%;
+    }
+  }
+}

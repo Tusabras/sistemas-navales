@@ -1,0 +1,23 @@
+@import './styles/styles.scss';
+.newnew { 
+    z-index: 9999;
+        position: fixed;
+        color:white;
+        text-align: center;
+    // top: 25px;
+        left: 40px;
+        top: 85px; 
+    padding: 10px;
+    cursor:pointer;
+    // left: 25px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    width: auto;
+  }
+
+  .goRed{
+      color:coral;
+  }
+  .goWhite{
+      color:white;
+  }

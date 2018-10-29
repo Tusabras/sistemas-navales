@@ -1,0 +1,321 @@
+@import '../../../../../../../assets/sass/mixins.scss';
+
+/*----------------------------------------
+Team
+------------------------------------------*/
+
+.team {
+  margin: 86px 0 -22px 9.14vw;
+
+  /**** Phone ****/
+  @include phone {
+    margin: 43px auto 0 auto;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    margin: 50px auto 0 auto;
+  }
+
+  /**** Destkop ****/
+  @include desktop {
+    margin: 64px auto 0 auto;
+  }
+
+  /**** Destkop Medium ****/
+  @include desktop-medium {
+    margin: 62px 0 0 15%;
+  }
+
+  h4 {
+    color: #2b2b2b;
+    font-family: Medium;
+    font-size: 28px;
+    margin: 0 0 31px 0;
+
+    /**** Phone ****/
+    @include phone {
+      font-size: 32px;
+    }
+
+    /**** Tablet Portrait ****/
+    @include tablet-portrait {
+      font-size: 36px;
+    }
+  }
+}
+
+
+
+/*---------------------
+Person
+----------------------*/
+
+.person {
+  display: flex;
+  position: relative;
+  vertical-align: middle;
+  justify-content: space-between;
+
+  &:first-of-type {
+    margin-top: 56px;
+  }
+
+  /**** Phone ****/
+  @include phone {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 73px;
+
+    &:first-of-type {
+      margin-top: 60px;
+    }
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 103px;
+
+    &:first-of-type {
+      margin-top: 83px;
+    }
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    flex-direction: row;
+    margin-top: 100px;
+
+    &:first-of-type {
+      margin-top: 75px;
+    }
+  }
+
+  /**** Tablet Landscape ****/
+  @include desktop {
+    margin-top: 121px;
+
+    &:first-of-type {
+      margin-top: 65px;
+    }
+  }
+}
+
+
+
+/*---------------------
+Descripcion
+----------------------*/
+
+.description {
+  width: 60%;
+
+  /**** Phone ****/
+  @include phone {
+    width: 100%;
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    width: 100%;
+    max-width: 440px;
+    margin-top: 26px;
+    text-align: center;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+    text-align: left;
+
+    &:nth-of-type(2) {
+      padding-left: 42px;
+    }
+
+    &:nth-of-type(1) {
+      padding-right: 42px;
+    }
+  }
+
+  .role {
+    font-family: Bold;
+    font-size: 12px;
+    color: #08285a;
+    margin: 0;
+  }
+
+  .name {
+    font-family: Medium;
+    font-size: 18px;
+    margin: 4px 0 0 0;
+  }
+
+  p {
+    color: #000;
+    font-family: Light;
+    font-size: 17px;
+    letter-spacing: .4px;
+    line-height: 26px;
+    margin: 0;
+
+    &:first-of-type {
+      margin-top: 18px;
+    }
+
+    /**** Phone ****/
+    @include phone {
+      max-width: 360px;
+      margin: 0 auto;
+
+      &:first-of-type {
+        margin: 29px auto 9px auto;
+      }
+    }
+
+    /**** Tablet Portrait ****/
+    @include tablet-portrait {
+      max-width: 440px;
+      margin: 0 auto;
+
+      &:first-of-type {
+        margin: 30px auto 0 auto;
+      }
+    }
+
+    /**** Tablet Landscape ****/
+    @include tablet-landscape {
+      max-width: none;
+      margin: 0;
+
+      &:first-of-type {
+        margin: 30px auto 0 auto;
+      }
+    }
+  }
+}
+
+
+
+/*---------------------
+Social
+----------------------*/
+
+.social {
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  /**** Phone ****/
+  @include phone {
+    order: -1;
+    max-width: 189px;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    max-width: 160px;
+    order: -1;
+  }
+
+  /**** Tablet Lanscape ****/
+  @include tablet-landscape {
+    order: 0;
+  }
+}
+
+
+
+/*---------------------
+LinkedIn Circle
+----------------------*/
+
+.linkedIn {
+  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  text-align: center;
+  z-index: 1;
+
+  /**** Phone ****/
+  @include phone {
+    width: 189px;
+    height: 189px;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    width: 160px;
+    height: 160px;
+  }
+
+  &:before {
+    content: 'LinkedIn';
+    font-family: Medium;
+    font-size: 18px;
+    line-height: 160px;
+    letter-spacing: .4px;
+    color: rgba(255, 255, 255, 0);
+    clip-path: circle(50% at 50% 50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 35, .0);
+    transition: all .4s ease-in-out;
+
+    /**** Phone ****/
+    @include phone {
+      line-height: 189px;
+    }
+
+    /**** Tablet Portrait ****/
+    @include tablet-portrait {
+      line-height: 160px;
+    }
+  }
+
+  &:hover:before {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 35, .6);
+    cursor: pointer;
+  }
+}
+
+
+
+/*---------------------
+Circle Shadow
+----------------------*/
+
+.circleShadow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  box-shadow: 5px 5px 66px 0px rgba(179,179,179,1);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  cursor: pointer;
+
+  /**** Phone ****/
+  @include phone {
+    width: 189px;
+    height: 189px;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    width: 160px;
+    height: 160px;
+  }
+}

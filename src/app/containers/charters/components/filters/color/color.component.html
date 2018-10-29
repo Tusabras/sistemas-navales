@@ -1,0 +1,18 @@
+<div class="receta" [class.eye-image]="true" [class.isActive]="isActive" [ngStyle]="{'background-color': color}" >
+    
+      <div class="swiper-container-receta" style="background-color:transparent;">
+        <div class="swiper-wrapper ">
+      
+                
+                  <span class="ab-right">
+                      <!-- <button  class="btn touchable" [class.boto-actiu]="isfav" [class.boto-inactiu]="!isfav" (click)="makeItFav()"><i class="fa fa-heart"></i></button> -->
+    
+                      <!-- <button  class="btn touchable" [class.boto-actiu]="isliked" [class.boto-inactiu]="!isliked">Add to cart <i class="fa fa-shopping-cart"></i></button> -->
+                      <p class="center" [ngStyle]="{'color':color==='black'?'white':'black'}">{{color}}</p>
+                  </span> 
+            
+               </div> 
+      </div>
+
+    
+    </div>

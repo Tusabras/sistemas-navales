@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="wrap">
+
+    <div class="content">
+
+      <div class="about">
+        <h3>ABOUT</h3>
+
+        <p>We are a boutique yacht charter company based in the beautiful city of <span class='heavy'>Barcelona</span> offering luxury yacht rental, sales and charter management. We work directly with marina owners and yacht crew to provide a <span class='heavy'>superior</span> client experience from the initial super yacht search to the charter itself.</p>
+        <input class='read-more-controller' type="checkbox"  id="about" />
+        <p class='read-more-target'>We combine the latest immersive <span class='heavy'>technology</span> with the guidance of our team of seasoned industry experts to select your ideal yacht and itinerary. Our goal is to serve clients on an individual basis exploiting our local <span class='heavy'>knowledges</span> and extensive resource network to create your bespoke charter.</p>
+        <label class='read-more-trigger' for="about" ></label>
+      </div>
+      <div class="shadow"></div>
+
+      <div class="team">
+        <h4>OUR TEAM</h4>
+
+        <div class="person">
+          <div class="description">
+            <span class="role">CEO & FOUNDER</span>
+            <h6 class="name">Victor Canela</h6>
+            <input class='read-more-controller' type="checkbox"  id="brian" />
+            <p>Victor is a former super yacht captain who worked his way through the ranks to gain insight into all aspects of the industry. <span class='read-more-target'> With experience in tourism, investment and technology driven fields, he is ideally placed to lead charterdart in redefining the super yacht charter market. He enjoys scuba diving and wakeboarding when he is not at the office.</span></p>
+            <label class='read-more-trigger' for="brian"></label>
+          </div>
+          <div class="social">
+            <a class="linkedIn" href='https://www.linkedin.com/' target="_blank" [ngStyle]="brian"></a>
+            <span class="circleShadow" ></span>
+          </div>
+        </div>
+
+        <div class="person">
+        <div class="social">
+          <a class="linkedIn" href='https://www.linkedin.com/' target="_blank"  [ngStyle]="carmen"></a>
+          <span class="circleShadow"></span>
+        </div>
+          <div class="description">
+            <span class="role">NA AGENCY</span>
+            <h6 class="name">CARMEN FRAJKOVIC</h6>
+            <input class='read-more-controller' type="checkbox"  id="carmen" />
+            <p>Art, design and beautiful things underpin the aspirational super yacht industry. <span class='read-more-target'> Carmen is an expert bringing fresh ideas into the world of yachts.</span></p>
+            <label class='read-more-trigger' for="carmen"></label>
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="description">
+            <span class="role">SALES & EXECUTIVE</span>
+            <h6 class="name">CLAUDIA LLADO GENIS</h6>
+            <input class='read-more-controller' type="checkbox"  id="claudia" />
+            <p>Claudia’s background in languages, cross-cultural communication and international travel alongside experience <span class='read-more-target'> in the luxury goods market creates a span combination for business development and yacht charter and sales. She enjoys gastronomy and volunteering when she is not.</span></p>
+            <label class='read-more-trigger' for="claudia"></label>
+          </div>
+          <div class="social">
+            <a class="linkedIn" href='https://www.linkedin.com/' target="_blank"  [ngStyle]="claudia"></a>
+            <span class="circleShadow" ></span>
+          </div>
+        </div>
+      </div>
+
+      <span class="shadowReversed" ></span>
+
+      <div class="partners">
+        <h4>PARTNERS</h4>
+        <div class="logos">
+          <div class='logos-column'>
+            <a href='http://www.oneoceanportvell.com/' target="_blank" class="one" ></a>
+            <a href='http://www.htc.com/es/' target="_blank" class="htc" ></a>
+          </div>
+          <div class='logos-column'>
+            <a href='https://www.vive.com/eu/' target="_blank" class="vive" ></a>
+            <a href='http://store.steampowered.com/' target="_blank" class="steam"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="shadow" ></div>
+
+      <div class="communication">
+        <h5>IF YOU HAVE ANY QUESTIONS, FEEL FREE TO GET IN TOUCH.</h5>
+        <a href='mailto:hello@charterdart.com' class="hello">hello@charterdart.com</a>
+        <h5>+ WE’RE ALWAYS READY TO TALK AT OUR OFFICE.</h5>
+        <a class="find" routerLink='/contact'>HOW TO FIND US</a>
+        <a class="scroll" (click)="scrollTop()">Scroll Top</a>
+      </div>
+    </div>
+
+    <div class="headquarters">
+      <p class='barcelona'>BARCELONA HQ</p>
+      <p class='oneocean'>ONEOCEAN PORTVELL</p>
+    </div>
+
+    <div class="background">
+       <div class="incline"></div>
+    </div>
+
+  </div>
+</div>

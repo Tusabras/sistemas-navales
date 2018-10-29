@@ -1,0 +1,80 @@
+/*--------------------------------------------
+Yachts Grid
+--------------------------------------------*/
+
+.top, .mid, .bot {
+  display: flex;
+  justify-content: safe center;
+}
+
+.top {
+  align-items: flex-end;
+
+  & .left, & .right {
+    position: relative;
+  }
+
+  .left {
+    min-width: 157px;
+    min-height: 124px;
+    width: 22.4285714286%;
+    height: 8.85714285714286vw;
+    margin-bottom: -2vw;
+  }
+
+  .right {
+    min-width: 207px;
+    min-height: 156px;
+    width: 29.57142857142857%;
+    height: 11.14285714285714vw;
+    margin: 0 0 0 3px;
+  }
+}
+
+.mid {
+  align-items: flex-end;
+  margin: 3px 0;
+
+  & .left, & .right {
+    position: relative;
+  }
+
+  .left {
+    min-width: 206px;
+    min-height: 128px;
+    width: 29.42857142857143%;
+    height: 9.14285714285714vw;
+  }
+
+  .right {
+    min-width: 256px;
+    min-height: 156px;
+    width: 36.57142857142857%;
+    height: 11.14285714285714vw;
+    margin-left: 3px;
+  }
+}
+
+
+.bot {
+  align-items: flex-start;
+
+  & .left, & .right {
+    position: relative;
+  }
+
+  .left {
+    min-width: 157px;
+    min-height: 113px;
+    width: 22.42857142857143%;
+    height: 8.07142857142857vw;
+  }
+
+  .right {
+    min-width: 226px;
+    min-height: 147px;
+    width: 32.28571428571429%;
+    height: 10.5vw;
+    margin: 0 61px 0 3px;
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../../../../../assets/sass/mixins.scss';
+
+/*-----------------------------------------
+Logotype
+------------------------------------------*/
+
+.logotype {
+  font-family: Light;
+  font-size: 34px;
+  color: #fff;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 12;
+
+  * {
+    cursor: pointer;
+  }
+
+  span {
+    font-family: Book !important;
+    font-size: 38px;
+    font-style: oblique;
+    letter-spacing: 4px;
+  }
+
+  @include phone {
+    font-size: 24px;
+    font-family: Book;
+
+    span {
+      font-family: Medium;
+    }
+  }
+
+  animation: linksVisible 2s ease-in both;
+}
+
+
+/*----------
+Animation
+----------*/
+
+@keyframes logoReveal {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

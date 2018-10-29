@@ -1,0 +1,36 @@
+@import './video.scss';
+@import '../../../../../assets/sass/mixins.scss';
+
+/*--------------------------------------------
+Experience
+--------------------------------------------*/
+
+.experience {
+
+  .description-inner {
+    max-width: 465px
+  }
+
+  .interactive {
+    position: relative;
+    /**** Phone ****/
+    @include phone {
+      width: 100vw;
+    }
+
+    /**** Tablet Portrait ****/
+    @include tablet-portrait {
+      width: 100vw;
+    }
+
+    /**** Tablet Landscape ****/
+    @include tablet-landscape {
+      width: 50vw;
+    }
+
+    /**** Desktop ****/
+    @include desktop {
+      width: 50vw;
+    }
+  }
+}

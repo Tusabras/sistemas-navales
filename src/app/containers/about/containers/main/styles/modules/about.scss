@@ -1,0 +1,77 @@
+@import '../../../../../../../assets/sass/mixins.scss';
+
+/*------------------------------------------
+About
+--------------------------------------------*/
+
+.about {
+
+  /**** Phone ****/
+  @include phone {
+    margin: 80px auto 0 auto;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    margin: 94px auto 0 auto;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    margin: 97px auto 0 auto;
+  }
+
+  /**** Destkop Medium ****/
+  @include desktop {
+    margin: 117px auto 0 auto;
+  }
+
+  /**** Destkop Medium ****/
+  @include desktop-medium {
+    margin: 117px 0 8px 15%;
+  }
+
+  h3 {
+    color: #2b2b2b;
+    font-family: Medium;
+    font-size: 46px;
+    margin: 0 0 31px 0;
+  }
+
+  p {
+    color: #000;
+    font-family: Light;
+    font-size: 17px;
+    letter-spacing: .4px;
+    line-height: 26px;
+    margin: 0;
+
+    &:first-of-type {
+      margin-bottom: 18px;
+    }
+
+    /**** Phone ****/
+    @include phone {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    /**** Tablet Portarait ****/
+    @include tablet-portrait {
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    /**** Tablet Landscape ****/
+    @include tablet-landscape {
+      max-width: none;
+      margin: 0 auto;
+    }
+  }
+
+  .heavy {
+    font-size: 16px;
+    font-family: Medium;
+    color: #08285a;
+  }
+}

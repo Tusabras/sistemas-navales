@@ -1,0 +1,103 @@
+@import '../../../../../../../../assets/sass/mixins.scss';
+
+/*------------------------------------------
+Phones
+-------------------------------------------*/
+
+.phones {
+  /**** Phone ****/
+  @include phone {
+    margin-top: 27px;
+  }
+}
+
+
+
+/*--------------------
+Phone
+--------------------*/
+
+.phone {
+  /**** Phone ****/
+  @include phone {
+    margin-top: 42px;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    margin: 42px 40px 0 40px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    margin: 72px 125px 0 0;
+    text-align: left;
+  }
+
+  /**** Desktop ****/
+  @include desktop {
+    margin-top: 60px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+
+
+/*--------------------
+Phone Origin
+--------------------*/
+
+.phone-origin {
+  letter-spacing: .4px;
+  margin: 0 0 12px 0;
+
+  /**** Phone ****/
+  @include phone {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: Medium;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Medium;
+  }
+}
+
+
+
+/*--------------------
+Phone Number
+--------------------*/
+
+.phone-number {
+  font-size: 16px;
+  display: table-cell;
+  cursor: pointer;
+  user-select: text;
+
+  /**** Phone ****/
+  @include phone {
+    color: #08285a;
+    font-family: Medium;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    color: #08285a;
+    font-family: Book;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,151 @@
+/*--------------------------------------
+Container
+--------------------------------------*/
+
+@keyframes containerSlideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes containerSlideUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+
+
+/*--------------------------------------
+Links
+--------------------------------------*/
+
+@keyframes linkToWhite {
+  0% {
+    color: #2b2b2b;
+    opacity: 0;
+  }
+  100% {
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+@keyframes linkToBlack {
+  0% {
+    color: #fff;
+    opacity: 0;
+  }
+  100% {
+    font-family: Medium;
+    color: #2b2b2b;
+    opacity: 1;
+  }
+}
+
+@keyframes linkDisolve {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes underlineToBlack {
+  0% {
+    background-color: #fff;
+  } 100% {
+    background-color: #2b2b2b;
+  }
+}
+
+
+
+/*--------------------------------------
+Background
+--------------------------------------*/
+
+@keyframes backgroundSlideUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes backgroundSlideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+
+
+/*--------------------------------------
+Compass
+--------------------------------------*/
+
+@keyframes compassToWhite{
+  0% {
+    background-image: url('/assets/icons/compass-black.svg');
+  }
+  100% {
+    background-image: url('/assets/icons/compass-white.svg');
+  }
+}
+
+@keyframes compassToBlack {
+  0% {
+    background-image: url('/assets/icons/compass-white.svg');
+  }
+  100% {
+    background-image: url('/assets/icons/compass-black.svg');
+  }
+}
+
+
+
+/*--------------------------------------
+LogoType
+--------------------------------------*/
+
+@keyframes logotypeToWhite {
+  0% {
+    color: #2b2b2b;
+    opacity: 0;
+  }
+  100% {
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+@keyframes logotypeToBlack {
+  0% {
+    color: #fff;
+    opacity: 0;
+  }
+  100% {
+    color: #2b2b2b;
+    opacity: 1;
+  }
+}

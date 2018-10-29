@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Light';
+  src: url('./light/light.woff2') format('woff2'),
+       url('./light/light.woff') format('woff'),
+    url('./light/light.eot') format('embedded-opentype'),
+    url('./light/light.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Book';
+  src: url('./book/book.woff2') format('woff2'),
+    url('./book/book.woff') format('woff'),
+    url('./book/book.eot') format('embedded-opentype'),
+    url('./book/book.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Medium';
+  src: url('./medium/medium.woff2') format('woff2'),
+    url('./medium/medium.woff') format('woff'),
+    url('./medium/medium.eot') format('embedded-opentype'),
+    url('./medium/medium.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Semibold';
+  src: url('./semibold/semibold.woff2') format('woff2'),
+    url('./semibold/semibold.woff') format('woff'),
+    url('./semibold/semibold.eot') format('embedded-opentype'),
+    url('./semibold/semibold.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Bold';
+  src: url('./bold/bold.woff2') format('woff2'),
+    url('./bold/bold.woff') format('woff'),
+    url('./bold/bold.eot') format('embedded-opentype'),
+    url('./bold/bold.otf') format('opentype');
+    font-weight: normal;
+}

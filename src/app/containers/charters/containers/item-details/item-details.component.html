@@ -1,0 +1,79 @@
+<div class="newnew" routerLink="/stampa"> 
+  <a class="goWhite"><i class="fa fa-angle-left goWhite"> </i> Home page</a>
+</div>  
+ 
+<div class="container" >
+    <div class="wrap">
+  
+      <div class="content">
+        <div class="contentBackground"  ></div>
+   
+        <div class='content-column'>
+          <div class="contact">
+            <div class="header">
+              <h5>Size - {{toUpper(m_shirt.size)}}</h5> 
+              <h3>{{m_shirt.name}}</h3>
+              <p><span>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.</span></p>
+            </div>
+          </div>
+  
+          <div class="shadow"></div>
+  
+          <div class="support"> 
+            <h4>PRICE - {{m_shirt.price | currency:'EUR':'symbol':'1.2-2'}}</h4>
+            <h4>CURRENT IN STOCK - {{m_shirt.quantity?m_shirt.quantity + decideSingularPlural(m_shirt.quantity):'Currently we do not have any in stock. '}}</h4>
+          </div> 
+   
+          <div class="shadow"></div>
+  
+          <div class="social-networks">
+            <a href='https://www.facebook.com/' target="_blank" class="social-icon facebook"></a>
+            <a href='https://www.linkedin.com/company-beta/21351/' target="_blank" class="social-icon linkedin"></a>
+            <a href='https://twitter.com/' target="_blank" class="social-icon twitter"></a>
+            <a href='https://www.instagram.com/' target="_blank" class="social-icon instagram"></a>
+            <a href='https://www.youtube.com/' target="_blank" class="social-icon youtube"></a>
+          </div>
+        </div>
+  
+        <div class="shadowReversed"></div>
+  
+        <div class='content-column'>
+  
+          <div class="location">
+            <div class="location-inner">
+              <div class="location-map" (click)="scrollTop()">
+                <div class="map-image-frame"><span class='map-image' [ngStyle]="{
+                  'background': m_shirt.colour }"></span></div>
+              </div> 
+              <h4>COLOR</h4>
+  
+              <p>{{toUpper(m_shirt.colour)}}
+              </p>
+            </div>
+          </div>
+  
+          <div class="shadowReversed"></div>
+  
+          <div class="newsletter">
+            <h4>YOU LIKE IT? </h4>
+            <!-- <p>Get fresh updates about yachts’ world, newest <span>destinations and simply cool stuff for travel lovers.</span></p> -->
+            <!-- <input class='subscribe-input'  minlength="12"
+         name="email" 
+         #email="ngModel" type='email' [(ngModel)]="contactEmail" placeholder='Enter email' /> -->
+            <button *ngIf="m_shirt.quantity && m_shirt.quantity>0" class='subscribe-submit' [class.goRed]="isInCart" (click)="addToCart()">{{isInCart?'ALREADY ON YOUR CART':'ADD TO MY CART!'}}</button>
+            <button *ngIf="!m_shirt.quantity || m_shirt.quantity === 0" class='subscribe-submit goRed'>Contact me when it is available</button>
+            
+          </div>   
+  
+          <a class="scrollTop" (click)="scrollTop()">Scroll Top</a>
+        </div>
+      </div>
+  
+      
+      <div class="background" [ngStyle]="{
+        'background': 'url('+ m_shirt.picture +') no-repeat center center',
+        'background-size': 'cover' }"></div>
+      <div class="backgroundShadow"></div>
+    </div>
+  </div>
+  

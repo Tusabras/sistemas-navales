@@ -1,0 +1,149 @@
+@import './animations/relative.scss';
+@import './animations/scroll.scss';
+@import '../../../../../../assets/sass/mixins.scss';
+
+/*----------------------------------------------------------------------------------
+States
+----------------------------------------------------------------------------------*/
+
+.initial {
+  z-index: 1;
+
+  .background {
+    opacity: 0; }
+}
+
+
+/*--------------------------------------
+Resetings on Discover Top position
+--------------------------------------*/
+
+.top.visible {
+
+  .link {
+    animation: linkToWhite .2s ease-in forwards; }
+
+  .background {
+    animation: backgroundSlideUp .2s ease-in forwards; }
+}
+
+
+/*--------------------------------------
+Original (Prevents first hidden state)
+--------------------------------------*/
+
+.original {
+  z-index: 1; }
+
+
+
+
+
+/*-------------------------------------------------------------------------------
+Compass Hover (Reveal)
+-------------------------------------------------------------------------------*/
+
+.interacting  {
+
+  .logotype {
+    animation: logotypeToBlack .2s ease-in forwards; }
+
+  .link {
+    animation: linkToBlack .2s ease-in forwards;
+
+    &:before {
+      animation: underlineToBlack .2s ease-in forwards; }
+  }
+
+  .compass {
+    animation: compassToBlack .2s ease-in forwards; }
+
+  .background {
+    animation: backgroundSlideDown .2s ease-in forwards; }
+}
+
+
+
+/*-------------------------------------------------------------------------------
+Controls mouseout (Hide)
+-------------------------------------------------------------------------------*/
+
+.hiding  {
+
+  .logotype {
+    animation: logotypeToWhite .2s ease-in forwards; }
+
+  .link {
+    animation: linkDisolve .2s ease-in forwards; }
+
+  .compass {
+    animation: compassToWhite .2s ease-in forwards; }
+
+  .background {
+    animation: backgroundSlideUp .2s ease-in forwards; }
+}
+
+
+
+/*-------------------------------------------------------------------------------
+Controls mouseout (Hide)
+-------------------------------------------------------------------------------*/
+
+.reseting  {
+
+  .logotype {
+    animation: logotypeToWhite .2s ease-in forwards; }
+
+  .link {
+    animation: linksToWhite .2s ease-in forwards; }
+
+  .compass {
+    animation: compassToWhite .2s ease-in forwards; }
+
+  .background {
+    animation: backgroundSlideUp .2s ease-in forwards; }
+}
+
+
+
+/*-------------------------------------------------------------------------------
+Scrolling Visible & Hidden
+-------------------------------------------------------------------------------*/
+
+.scrolling.visible, .scrolling.hidden {
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+  z-index: 100;
+
+  .logotype {
+    color: #2b2b2b; }
+
+  .link {
+    color: #2b2b2b;
+    font-family: Medium;
+
+    &:before {
+      background-color: #2b2b2b; }
+  }
+
+  .background {
+    opacity: 1; }
+}
+
+
+
+/*----------------------------------------
+Visible
+-----------------------------------------*/
+
+.scrolling.visible {
+  animation-name: containerSlideDown; }
+
+
+
+/*----------------------------------------
+Hidden
+-----------------------------------------*/
+
+.scrolling.hidden {
+  animation-name: containerSlideUp; }

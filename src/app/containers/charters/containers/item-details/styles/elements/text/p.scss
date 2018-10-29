@@ -1,0 +1,18 @@
+@import '../../../../../../../../assets/sass/mixins.scss';
+ 
+/*------------------------------------------
+<p> tag
+-------------------------------------------*/
+
+p {
+  color: #000;
+  font-family: Light;
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: .4px;
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    margin-right: 100px;
+  }
+}

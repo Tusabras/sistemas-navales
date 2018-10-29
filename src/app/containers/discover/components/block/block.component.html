@@ -1,0 +1,43 @@
+<div class="experience">
+
+
+    <div *ngIf="textIsLeft" class="description">
+      <div class='description-inner'>
+        <h3 class='description-subtitle'>{{subtitle}}</h3>
+        <h2 class='description-title'>{{title}}</h2>
+        <p class='description-text'>{{text}}</p>
+      </div>
+      <h4 class='description-number'>{{number}}</h4>
+      <a *ngIf="showButton" class='description-button' routerLink='/contact'>CONTACT US</a>
+    </div>
+
+    <div *ngIf="show360" class="interactive panorama" (mouseleave)="deactivate()" (mouseenter)="dragCheck()">
+
+      <div class='panorama-cover visible' [ngClass]="panoramaV ? 'hidden' : 'visible'" [ngStyle]="{'z-index': panoramaZ ? '1' : '-1'}">
+        <span class='cover-360' (click)="activate()" (mouseenter)="activate()">360°</span>
+        <div class='place'>
+          <h6>MOUNTAINS</h6>
+          <span>PLANET EARTH</span>
+        </div>
+      </div>
+
+      <a-scene embedded>
+       <a-sky src="/assets/images/discover/panorama.jpg" rotation="0 -130 0"></a-sky>
+      </a-scene>
+    </div>
+
+    <collage-images *ngIf="showCollage"></collage-images>
+  
+    <div *ngIf="showVideo" class="interactive video"></div>
+
+    <div *ngIf="!textIsLeft" class="description">
+      <div class='description-inner'>
+        <h3 class='description-subtitle'>{{subtitle}}</h3>
+        <h2 class='description-title'>{{title}}</h2>
+        <p class='description-text'>{{text}}</p>
+      </div>
+      <h4 class='description-number'>{{number}}</h4>
+      <a *ngIf="showButton" class='description-button' routerLink='/contact'>CONTACT US</a>
+    </div>
+    
+  </div>

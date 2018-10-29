@@ -1,0 +1,57 @@
+@import '../../../../../../../../assets/sass/mixins.scss';
+@import './phones.scss';
+@import './email.scss';
+
+/*------------------------------------------
+Support
+-------------------------------------------*/
+
+.support {
+  margin-top: 56px;
+  display: flex;
+
+  /**** Phone ****/
+  @include phone {
+    width: 80%;
+    margin: 16px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    max-width: 440px;
+    margin: 10px auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    max-width: 500px;
+    margin: 27px 0 37px 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /**** Desktop ****/
+  @include desktop {
+    max-width: 400px;
+    margin: 51px 0 0 0;
+  }
+
+  /*-- Header --*/
+  h4 {
+    margin-bottom: 31px;
+
+    /**** Phone ****/
+    @include phone {
+      margin-bottom: 32px;
+    }
+  }
+
+  /*-- Text --*/
+  p {
+    margin: 0 0 29px 0; }
+}

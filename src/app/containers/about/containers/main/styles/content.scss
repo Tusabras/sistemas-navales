@@ -1,0 +1,82 @@
+@import '../../../../../../assets/sass/mixins.scss';
+
+/*-----------------------------------------
+Content
+------------------------------------------*/
+
+.content {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  cursor: default;
+  background-color: #fffefd;
+
+  /**** Phone ****/
+  @include phone {
+    width: 100%;
+    margin-top: 80vh;
+    text-align: center;
+    height: auto
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    width: 100%;
+    margin-top: 80vh;
+    text-align: center;
+    height: auto;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    background-color: #fffefd;
+    text-align: left;
+  }
+
+  /**** Desktop ****/
+  @include desktop-medium {
+    width: calc(60vw + .4vh);
+    height: 100%;
+    margin-top: 0;
+    overflow-y: scroll;
+  }
+}
+
+
+
+/*--------------------
+Modules
+----------------------*/
+
+.about, .team, .partners, .communication {
+  cursor: default;
+
+  /**** Phone ****/
+  @include phone {
+    width: calc(100% - 84px);
+    z-index: 1;
+    margin-top: 60%;
+    position: relative;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    width: 60%;
+    position: relative;
+    z-index: 1;
+    margin-top: 60%;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    width: 72%;
+    max-width: 700px;
+  }
+
+  /**** Desktop Medium ****/
+  @include desktop-medium {
+    width: 60%;
+  }
+}

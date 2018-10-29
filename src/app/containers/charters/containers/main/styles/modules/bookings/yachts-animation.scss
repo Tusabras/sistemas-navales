@@ -1,0 +1,146 @@
+/*--------------------------------------------
+Yachts Animation
+--------------------------------------------*/
+
+.n2, .n3, .n5, .n6, .n8, .n9, .n11, .n12, .n14, .n15, .n17, .n18 {
+  animation: imageSwaps 90s linear infinite;
+}
+
+.n1, .n4, .n7, .n10, .n13, .n16 {
+  z-index: 1;
+}
+
+.n1 {
+  background-color: #229954;
+}
+
+.n2 {
+  background-color: #C39BD3;
+  animation-delay: 15s;
+}
+
+.n3 {
+  background-color: #E5E7E9;
+  animation-delay: 45s;
+}
+
+
+
+.n4 {
+  background-color: #922B21;
+}
+
+.n5 {
+  background-color: #566573;
+  animation-delay: 25s;
+}
+
+.n6 {
+  background-color: #EB984E;
+  animation-delay: 55s;
+}
+
+
+
+.n7 {
+  background-color: #D1F2EB;
+}
+
+.n8 {
+  background-color: #CA6F1E;
+  animation-delay: 5s;
+}
+
+.n9 {
+  background-color: #A9DFBF;
+  animation-delay: 35s;
+}
+
+
+.n10 {
+  background-color: #0B5345;
+}
+
+.n11 {
+  background-color: #884EA0;
+  animation-delay: 20s;
+}
+
+.n12 {
+  background-color: #34495E;
+  animation-delay: 50s;
+}
+
+
+
+.n13 {
+  background-color: #7B241C;
+}
+
+.n14 {
+  background-color: #148F77;
+  animation-delay: 30s;
+}
+
+.n15 {
+  background-color: #CACFD2;
+  animation-delay: 60s;
+}
+
+
+
+.n16 {
+  background-color: #F6DDCC;
+}
+
+.n17 {
+  background-color: #D4EFDF;
+  animation-delay: 10s;
+}
+
+.n18 {
+  background-color: #F9E79F;
+  animation-delay: 40s;
+}
+
+/*-----------------------------------------
+Image Swaps Animation
+-----------------------------------------*/
+
+@keyframes imageSwaps {
+  0% {
+    opacity: 0;
+    z-index: 2;
+  }
+  1.11%, 35% {
+    opacity: 1;
+    z-index: 2;
+  }
+  35.01%, 100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+//0s     n1, n4, n7, n10, n13, n16
+
+//5s     n7  > n8
+//10s    n16 > n17
+//15s    n1  > n2
+//20s    n10 > n11
+//25s    n4  > n5
+//30s    n13 > n14
+
+//35s    n7  > n8    > n9
+//40s    n16 > n17   > n18
+//45s    n1  > n2    > n3
+//50s    n10 > n11   > n12
+//55s    n4  > n5    > n6
+//60s    n13 > n14   > n15
+
+//65s    n7  > n8    > n9    > n7
+//70s    n16 > n17   > n18   > n16
+//75s    n1  > n2    > n3    > n1
+//80s    n10 > n11   > n12   > n10
+//85s    n4  > n5    > n6    > n4
+//90s    n13 > n14   > n15   > n13

@@ -1,0 +1,59 @@
+/*---------------------
+White
+----------------------*/
+
+.black {
+  a {
+    color: rgba(43, 43, 43, .4);
+    font-family: SemiBold;
+
+
+    &:hover {
+      color: rgba(43, 43, 43, 1);
+    }
+  }
+
+  .active {
+    color: rgba(43, 43, 43, 1);
+  }
+}
+
+
+/*---------------------
+White
+----------------------*/
+
+.white {
+  a {
+    color: rgba(255, 255, 255, .4);
+    font-family: Medium;
+
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .active {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+
+
+
+/*---------------------
+Hide Numbers
+----------------------*/
+
+.hideNumbers {
+  bottom: 47px;
+
+  a {
+    display: none;
+  }
+}
+
+.hideButton button {
+  display: none;
+}

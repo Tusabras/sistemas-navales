@@ -1,0 +1,34 @@
+@import '../../../../../../../assets/sass/mixins.scss';
+
+/*----------------------------------------
+Scroll Top
+----------------------------------------*/
+
+.scrollTop {
+  cursor: pointer;
+  display: inline-block;
+  color: #08285a;
+  font-size: 14px;
+  line-height: 2;
+  font-family: SemiBold;
+  padding: 10px;
+
+  /**** Phone ****/
+  @include phone {
+    margin: 63px 0 45px 0;
+    position: relative;
+    z-index: 3;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    margin: 51px 0 31px 0;
+    position: relative;
+    z-index: 3;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    display: none;
+  }
+}

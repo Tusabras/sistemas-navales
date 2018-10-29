@@ -1,0 +1,10 @@
+<div [ngClass]="componentState.inverted ? 'black' : 'white'" class='numbers'>
+  <div [ngStyle]="{display: componentState.visible ? 'block' : 'none'  }">
+    <a class='number' routerLink='/stampa' routerLinkActive='active'>01</a>
+    <a class='number' routerLink='/linpin' routerLinkActive='active'>02</a>
+    <a class='number' routerLink='/about' routerLinkActive='active'>03</a>
+    <a class='number' routerLink='/contact' routerLinkActive='active'>04</a>
+    <a class='number' routerLink='/discover' routerLinkActive='active'>05</a>
+  </div>
+  <button class='continue' *ngIf="componentState.continue" routerLink='/vr-experience'>CONTINUE NAVIGATION</button>
+</div>

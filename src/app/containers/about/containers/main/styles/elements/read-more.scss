@@ -1,0 +1,50 @@
+@import '../../../../../../../assets/sass/mixins.scss';
+
+/*------------------------------------------
+Read More
+--------------------------------------------*/
+
+.read-more-controller, .read-more-trigger {
+  display: none;
+}
+
+/**** Phone ****/
+@include phone {
+
+  .read-more-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: 0s ease-in-out;
+    margin: 0;
+  }
+
+  .read-more-controller:checked ~ .read-more-target, .read-more-controller:checked ~ p .read-more-target {
+    opacity: 1;
+    font-size: 17px;
+    max-height: 999em;
+    margin-bottom: 16px;
+  }
+
+  .read-more-trigger {
+    cursor: pointer;
+    display: inline-block;
+    color: #08285a;
+    font-size: 14px;
+    line-height: 2;
+    font-family: SemiBold;
+    padding: 10px;
+  }
+
+  .read-more-controller ~ .read-more-trigger:before {
+    padding: 10px;
+    content: 'More';
+  }
+
+  .read-more-controller:checked ~ .read-more-trigger {
+
+    &:before {
+      content: 'Less';
+    }
+  }
+}

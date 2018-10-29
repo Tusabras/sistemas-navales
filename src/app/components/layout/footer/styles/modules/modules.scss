@@ -1,0 +1,126 @@
+
+@import './footer/footer.scss';
+@import './button.scss';
+
+/*---------------------
+Slides
+---------------------*/
+
+.booking, .destinations, .experience {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+  background-color: #fffefd;
+}
+
+
+
+/*---------------------
+Description
+---------------------*/
+
+.description {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #2b2b2b;
+  position: relative;
+  overflow: hidden;
+
+  &-title, &-subtitle, &-text {
+    width: 100%;
+  }
+}
+
+
+
+/*---------------------
+Description Innner
+---------------------*/
+
+.description-inner {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/*---------------------
+Subtitle
+---------------------*/
+
+.description-subtitle {
+  font-family: Book;
+  font-size: 20px;
+  margin: 0;
+  z-index: 1;
+}
+
+
+
+/*---------------------
+Title
+---------------------*/
+
+.description-title {
+  font-family: Medium;
+  font-size: 46px;
+  letter-spacing: .4px;
+  margin: 0;
+  margin-left: -2px;
+  z-index: 1;
+}
+
+
+
+/*---------------------
+Text
+---------------------*/
+
+.description-text {
+  font-family: Light;
+  font-size: 17px;
+  line-height: 30px;
+  letter-spacing: .4px;
+  margin: 36px 0 0 0;;
+  z-index: 1;
+}
+
+
+
+/*---------------------
+Background Number
+---------------------*/
+
+.description-number {
+  font-size: 600px;
+  font-family: Medium;
+  color: rgb(250, 250, 250);
+  text-align: center;
+
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 0;
+}
+
+
+/*---------------------
+Interactive
+---------------------*/
+
+.interactive {
+  flex-grow: 1;
+  flex-basis: 0;
+  box-shadow: -4px 0px 60px 0px rgba(0, 0, 0, 0.03);
+  z-index: 1;
+}

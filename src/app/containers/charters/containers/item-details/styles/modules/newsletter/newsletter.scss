@@ -1,0 +1,54 @@
+@import '../../../../../../../../assets/sass/mixins.scss';
+@import './input.scss';
+
+/*------------------------------------------
+Location
+------------------------------------------*/
+
+.newsletter {
+  position: relative;
+
+  /**** Phone ****/
+  @include phone {
+    width: 80%;
+    text-align: center;
+    margin: 105px 0 0 0;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    width: 80%;
+    max-width: 440px;
+    text-align: center;
+    margin: 95px 0 0 0;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+    margin: 114px 0 15px 0;
+  }
+
+  /**** Desktop ****/
+  @include desktop {
+    max-width: 400px;
+    margin: 0;
+  }
+
+  /**** Desktop Medium ****/
+  @include desktop-medium {
+    max-width: 440px; }
+
+
+
+  /*--- Text ---*/
+  h4 {
+    margin: 0 0 32px 0;
+  }
+
+  p {
+    margin: 0 0 24px 0;
+  }
+}

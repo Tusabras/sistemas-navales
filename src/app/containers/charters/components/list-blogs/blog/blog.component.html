@@ -1,0 +1,26 @@
+<div class="receta" [class.eye-image]="true"  [ngStyle]="{
+  'background': 'url('+shirt.picture+') no-repeat center center',
+  'background-size': 'cover' }" >
+
+  <div class="swiper-container-receta" style="background-color:transparent;">
+    <div class="swiper-wrapper ">
+  
+            
+              <span class="ab-right">
+                  <button *ngIf="shirt.quantity && shirt.quantity>0" class="btn touchable" (click)="addToCart()" [class.boto-actiu]="isInCart" [class.boto-inactiu]="!isInCart">{{isInCart?'Remove from cart':'Add to cart'}} <i class="fa fa-shopping-cart"></i></button>
+                   <p class="txt" *ngIf="!shirt.quantity || shirt.quantity===0">Not in stock</p>
+              </span> 
+         
+           </div> 
+  </div>
+
+      <div class="contenido" >
+          <h3>{{shirt.name}}</h3>
+          <a >{{shirt.price | currency:'EUR':'symbol':'1.2-2'}}</a>
+          <hr>
+
+              <a class="btn btn-success" [routerLink]="['more-details-item', shirt.id]">See more details</a>
+          
+      </div>
+
+</div>

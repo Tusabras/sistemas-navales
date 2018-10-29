@@ -1,0 +1,130 @@
+/*------------------------------------------
+Headers
+------------------------------------------*/
+
+.headers-wrapper {
+  width: 80%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.headers {
+  height: 120px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/*---------------------
+Title
+---------------------*/
+
+.title {
+  /**** Phone ****/
+  @include phone {
+    font-family: Book;
+    font-size: 40px;
+    line-height: 46px;
+    letter-spacing: 5px;
+    display: inline-block;
+    margin: 135px auto 0 auto;
+    border-bottom: #fff 2px solid;
+    padding-bottom: 6px;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    font-family: Book;
+    font-size: 80px;
+    letter-spacing: 5px;
+    // margin: 0 auto;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    font-family: Medium;
+    font-size: 50px;
+  }
+
+  /**** Desktop ****/
+  @include desktop {
+    font-family: Book;
+    font-size: 28px;
+  }
+}
+
+
+
+/*---------------------
+Header Styles
+---------------------*/
+
+.header {
+  font-family: Medium;
+  font-size: 118px;
+  line-height: 110px;
+  letter-spacing: 5px;
+  color: rgba(255, 255, 255, .4);
+  height: 120px;
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  animation: slideInOut 40s ease-in infinite;
+
+  &:before {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    overflow: hidden;;
+    content: attr(data-text);
+    display: block;
+    animation: background-fromCenter 40s linear infinite forwards;
+    // animation: background-fromLeft 40s linear infinite forwards;
+    // animation: background-fromBottom 40s linear infinite forwards;
+  }
+
+  &:nth-of-type(4), &:nth-of-type(4):before  {
+    animation-delay: 30s;
+  }
+
+  &:nth-of-type(3), &:nth-of-type(3):before  {
+    animation-delay: 20s;
+  }
+
+  &:nth-of-type(2), &:nth-of-type(2):before {
+    animation-delay: 10s;
+  }
+
+  &:nth-of-type(1), &:nth-of-type(1):before {
+    animation-delay: 0;
+  }
+}
+
+
+/*---------------------
+Background Header
+---------------------*/
+
+.background-header {
+  font-family: SemiBold;
+  font-size: 600px;
+  line-height: 400px;
+  color: rgba(255, 255, 255, .06);
+  text-align: center;
+
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 1;
+}
+

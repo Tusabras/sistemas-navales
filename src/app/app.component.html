@@ -1,0 +1,11 @@
+<!-- <Header></Header> -->
+
+    <router-outlet></router-outlet>
+    <app-numbers></app-numbers>
+    <app-links></app-links>
+    <div *ngIf="mounted && router.url !== '/contact' && router.url !== '/about'" >
+        <Footer></Footer>
+    </div>
+    
+    
+<!-- <Header></Header> -->

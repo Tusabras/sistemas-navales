@@ -1,0 +1,105 @@
+@import './link.scss';
+@import '../../../../../../assets/sass/mixins.scss';
+
+/*------------------------------------------
+Links
+------------------------------------------*/
+
+.links {
+  align-items: center;
+
+  a {
+    color: #fff;
+    font-family: Book;
+
+    &:before {
+      background-color: #fff;
+    }
+  }
+
+  .active:before {
+    visibility: visible;
+  }
+
+  /**** Phone ****/
+  @include phone {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    justify-content: safe center;
+
+    .active:before {
+      transform: scale(1);
+    }
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    justify-content: safe center;
+
+    .active:before {
+      transform: scale(1);
+    }
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    justify-content: unset;
+    width: auto;
+    min-height: unset;
+    position: relative;
+
+    .active:before {
+      transform: scaleX(.4);
+    }
+  }
+}
+
+
+
+/*---------------------
+Hidden
+---------------------*/
+
+.linksHidden {
+  display: none;
+}
+
+
+
+/*---------------------
+Visible
+---------------------*/
+
+.linksVisible{
+  display: inline-flex;
+
+  /**** Phone ****/
+  @include phone {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    flex-direction: row;
+    align-items: center;
+  }
+}

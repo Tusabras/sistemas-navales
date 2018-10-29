@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="wrap">
+
+    <div class="content">
+      <div class="contentBackground" ></div>
+
+      <div class='content-column'>
+        <div class="contact">
+          <div class="header">
+            <h5>24/7/365</h5>
+            <h3>CONTACT</h3>
+            <p>Were excited to invite you to our Barcelona-based<span> interactive showroom exclusively at OneOcean Port Vell.</span></p>
+          </div>
+        </div>
+
+        <div class="shadow"></div>
+
+        <div class="support">
+          <h4>SUPPORT & ASSISTANCE</h4>
+          <p>If you have any question or would like to cooperate.<span> Reach us out, we will be glad to hear from you.</span></p>
+          <a class="mail" href='mailto:hello@charterdart.com'>hello@charterdart.com</a>
+          <div class="phones">
+            <div class="phone">
+              <h6 class='phone-origin'>Europe</h6>
+              <a class='phone-number' href='tel: +34 9300 98470'>+34 9300 98470</a>
+            </div>
+            <div class="phone">
+              <h6 class='phone-origin'>North America</h6>
+              <a class='phone-number' href='tel: + 1 (415) 792-0705'>+ 1 (415) 792-0705</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="shadow"></div>
+
+        <div class="social-networks">
+          <a href='https://www.facebook.com/charterdart' target="_blank" class="social-icon facebook"></a>
+          <a href='https://www.linkedin.com/company/10639572' target="_blank" class="social-icon linkedin"></a>
+          <a href='https://twitter.com/charterdart' target="_blank" class="social-icon twitter"></a>
+          <a href='https://www.instagram.com/charterdart/' target="_blank" class="social-icon instagram"></a>
+          <a href='https://www.youtube.com/channel/UChK4Cy-fr6T78Gmo3N-vvrg' target="_blank" class="social-icon youtube"></a>
+        </div>
+      </div>
+
+      <div class="shadowReversed"></div>
+
+      <div class='content-column'>
+
+        <div class="location">
+          <div class="location-inner">
+            <div class="location-map" (click)="googleMap = true" (click)="scrollTop()">
+              <div class="map-image-frame"><span class='map-image'></span></div>
+            </div>
+            <h4>BARCELONA HQ</h4>
+
+            <p>Carrer de l'Escar, 26 <br />
+               Barcelona, Catalonia, 08039
+            </p>
+            <span>41.377542° 2.187331°</span>
+          </div>
+        </div>
+
+        <div class="shadowReversed"></div>
+
+        <div class="newsletter">
+          <h4>NEWSLETTER</h4>
+          <p>Get fresh updates about yachts’ world, newest <span>destinations and simply cool stuff for travel lovers.</span></p>
+          <!-- <input class='subscribe-input'  minlength="12" name="email" #email="ngModel" type='email' [(ngModel)]="contactEmail" placeholder='Enter email' /> -->
+          <!-- <button class='subscribe-submit' [disabled]="email.invalid" (click)="sendEmail()">CONNECT</button> -->
+        </div>
+
+        <a class="scrollTop" (click)="scrollTop()">Scroll Top</a>
+      </div>
+    </div>
+
+    <div class='google-map' [ngClass]="googleMap ? '' : 'hidden'">
+      <app-map></app-map>
+      <a class="close-map" (click)="googleMap = false"></a>
+    </div>
+    <div class="background"></div>
+    <div class="backgroundShadow"></div>
+  </div>
+</div>

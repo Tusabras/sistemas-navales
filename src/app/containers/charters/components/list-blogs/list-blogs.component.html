@@ -1,0 +1,18 @@
+<!-- <div class="loadingPage" *ngIf="!isloaded ">
+    <img src="src/assets/images/728.gif">
+</div>
+
+<div class="blogins" *ngIf="isloaded ">
+<div *ngFor="let item of items | async" >
+
+        <blog *ngIf="item.property && item.allowed"  [fblikes]="fblikes" [fb]="fb" [user]="user" [thiscard]='item' [lang]="lang" [translations]="translations"></blog>		
+
+</div>
+</div> -->
+
+
+    <div class="blogins">
+      <div *ngFor="let shirt of shirts" >
+        <app-blog *ngIf="shouldShow(shirt)" [shirt]="shirt"></app-blog>
+      </div> 
+    </div> 

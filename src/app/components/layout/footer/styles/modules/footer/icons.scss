@@ -1,0 +1,107 @@
+@import '../../../../../../../assets/sass/mixins.scss';
+
+/*-----------------------------------------
+Icons
+------------------------------------------*/
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /**** Phone ****/
+  @include phone {
+    // width: 80%;
+    // margin: 36px auto 6px auto;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    // margin: 36px auto 6px auto;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-landscape {
+    // margin: 55px auto 26px auto;
+  }
+
+  /**** Desktop ****/
+  @include desktop {
+    justify-content: unset;
+    // margin: 79px 0 86px 0;
+  }
+
+  a {
+    width: 62px;
+    height: 62px;
+    border-radius: 5%;
+    display: inline-block;
+    background-size: cover;
+    background-size: contain;
+    box-shadow: 1px 1px 10px 0px rgba(228, 228, 228, .6);
+
+    &:active {
+      box-shadow: 1px 1px 10px 0px rgba(228, 228, 228, 0);
+    }
+
+    /**** Phone ****/
+    @include phone {
+      width: 62px;
+      height: 62px;
+      margin: 5px;
+    }
+
+    /**** Tablet Portrait ****/
+    @include tablet-portrait {
+      width: 79px;
+      height: 79px;
+      margin: 5px;
+    }
+
+    /**** Tablet Landscape ****/
+    @include tablet-landscape {
+      width: 79px;
+      height: 79px;
+      margin: 5px 35px;
+      box-shadow: 3px 3px 20px 1px rgba(228, 228, 228, .6);
+    }
+
+    /**** Desktop ****/
+    @include desktop {
+      width: 42px;
+      height: 42px;
+      margin: 0 15px 0 15px;
+    }
+  }
+}
+
+
+
+/*---------------------
+Images
+----------------------*/
+
+.facebook {
+  background-image: url('/assets/icons/social/fb.svg');
+  transform: rotate(1deg);
+}
+
+.linkedin {
+  background-image: url('/assets/icons/social/li.svg');
+  transform: rotate(-2deg);
+}
+
+.twitter {
+  background-image: url('/assets/icons/social/tw.svg');
+  transform: rotate(1deg);
+}
+
+.instagram {
+  background-image: url('/assets/icons/social/inst.svg');
+  transform: rotate(2deg);
+}
+
+.youtube {
+  background-image: url('/assets/icons/social/yt.svg');
+  transform: rotate(-1deg);
+}

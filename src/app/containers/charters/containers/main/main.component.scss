@@ -1,0 +1,40 @@
+@import './styles/styles.scss';
+@import '../../../../../assets/sass/mixins.scss';
+#photosphere { 
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 400;
+  }
+}
+ 
+.container {
+	padding:0;
+} 
+
+.filters {
+    min-height: 60vh;
+    margin-top: 60vh;
+    // padding: 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.03);
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-color: #fffefd;
+
+    /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    margin-top: -5vh;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    margin-top: 60vh;
+  }
+}

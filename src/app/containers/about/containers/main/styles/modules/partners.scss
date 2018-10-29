@@ -1,0 +1,186 @@
+@import '../../../../../../../assets/sass/mixins.scss';
+
+/*----------------------------------------
+Partners
+------------------------------------------*/
+
+.partners {
+  margin: 112px 0 0 9.14vw;
+  user-select: none;
+
+
+  /**** Phone ****/
+  @include phone {
+    margin: 103px auto 89px auto;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    margin: 108px auto 89px auto;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    max-width: 800px;
+    margin: 110px auto 89px auto;
+  }
+
+  /**** Tablet Landscape ****/
+  @include desktop {
+    max-width: 800px;
+    margin: 123px auto 89px auto;
+  }
+
+  /**** Destkop Medium ****/
+  @include desktop-medium {
+    margin: 125px 0 89px 5%;
+    max-width: 80%;
+  }
+
+  h4 {
+    color: #2b2b2b;
+    font-family: Medium;
+    margin: 0 0 31px 0;
+    text-align: center;
+
+    /**** Tablet Portrait ****/
+    @include phone {
+      font-size: 32px;
+    }
+
+    /**** Tablet Portrait ****/
+    @include tablet-portrait {
+      font-size: 32px;
+    }
+  }
+}
+
+
+
+/*--------------------
+Logos
+---------------------*/
+
+.logos {
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+
+  /**** Phone ****/
+  @include phone {
+    margin-top: 44px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a {
+    margin: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /**** Phone ****/
+    @include phone {
+      height: 60px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.logos-column {
+  display: flex;
+
+  /**** Phone ****/
+  @include phone {
+    height: 158px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    justify-content: space-around;
+    align-items: center;
+
+    &:first-of-type {
+      width: 58.11475409836066%;
+    }
+
+    &:last-of-type {
+      width: 41.88524590163934%;
+    }
+  }
+
+  /**** Destkop Medium ****/
+  @include desktop-medium {
+    justify-content: space-around;
+    // justify-content: initial;
+
+    &:first-of-type {
+      width: 58.11475409836066%;
+    }
+
+    &:last-of-type {
+      width: 41.88524590163934%;
+    }
+  }
+}
+
+
+/*--------------------
+Companies
+---------------------*/
+
+.one {
+  width: 105px;
+  height: 84px;
+  background-image: url('/assets/icons/partners/one.svg');
+
+  @include phone {
+    width: 75px;
+    height: 60px;
+  }
+}
+
+.htc {
+  width: 111px;
+  height: 37px;
+  background-image: url('/assets/icons/partners/htc.svg');
+
+  @include phone {
+    width: 79px;
+    height: 27px;
+  }
+}
+
+.vive {
+  width: 55px;
+  height: 73px;
+  background-image: url('/assets/icons/partners/vive.svg');
+
+  @include phone {
+    width: 40px;
+    height: 53px;
+  }
+}
+
+.steam {
+  width: 55px;
+  height: 73px;
+  background-image: url('/assets/icons/partners/steam.svg');
+
+  @include phone {
+    width: 43px;
+    height: 53px;
+  }
+}
