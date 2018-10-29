@@ -1,0 +1,98 @@
+@import './controls/controls.scss';
+@import './interaction/states.scss';
+@import './background.scss';
+@import '../../../../../assets/sass/mixins.scss';
+
+/*--------------------------------------------
+General
+--------------------------------------------*/
+
+.container {
+  width: 100%;
+  left: 0;
+  top: 0;
+
+
+
+  /**** Phone ****/
+  @include phone {
+    position: absolute;
+    height: 107px;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    position: absolute;
+    height: 144px;
+  }
+
+  /**** Tablet Landscape ****/
+  @include tablet-landscape {
+    // height: 144px;
+  }
+
+  /**** Desktop ****/
+  @include desktop {
+    position: fixed;
+    height: 144px;
+  }
+}
+
+.wrap {
+  width: calc(100% - 158px);
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: hidden;
+  animation: initialReveal 1s ease-in forwards;
+
+  /**** Phone ****/
+  @include phone {
+    width: calc(100% - 60px);
+    margin: 37px 30px;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    width: calc(100% - 98px);
+    margin: 37px 49px;
+  }
+
+  @include tablet-landscape {
+    width: calc(100% - 158px);
+    height: 100%;
+    margin: 0 79px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /*--------------------
+  Animation
+  --------------------*/
+
+  @keyframes initialReveal {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+  }
+}
+
+
+
+/*--------------------
+Mobile View
+---------------------*/
+
+.mobileView {
+  height: auto;
+  min-height: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .9);
+  overflow-y: scroll;
+  z-index: 10;
+}

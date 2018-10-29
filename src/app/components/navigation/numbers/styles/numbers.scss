@@ -1,0 +1,76 @@
+@import './states.scss';
+@import '../../../../../assets/sass/mixins.scss';
+
+
+/*--------------------------------------------
+Numbers
+--------------------------------------------*/
+
+.numbers {
+  position: fixed;
+  bottom: 25vh;
+  right: 79px;
+  z-index: 3;
+
+  /**** Phone ****/
+  @include phone {
+    display: none;
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    display: none;
+  }
+
+  /**** Desktop ****/
+  @include desktop {
+    display: initial;
+  }
+}
+
+
+
+/*--------------------
+Number
+---------------------*/
+
+.number {
+  font-size: 12px;
+  display: block;
+  transform: rotate(90deg);
+  margin-top: 19px;
+  transition: color .4s ease-in-out;
+}
+
+
+/*--------------------
+Continue
+---------------------*/
+
+.continue {
+  color: #fff;
+  font-family: Medium;
+  font-size: 16px;
+  letter-spacing: .4px;
+  padding: 0;
+  display: block;
+
+  &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out;
+  }
+}

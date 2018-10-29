@@ -5,7 +5,7 @@ import Jump from 'jump.js';
 @Component({
   selector: 'main',
   templateUrl: 'main.component.html',
-  styleUrls: ['main.component.scss','./styles/styles.scss']
+  styleUrls: ['main.component.scss']
 })
 export class MainComponent implements OnInit {
 

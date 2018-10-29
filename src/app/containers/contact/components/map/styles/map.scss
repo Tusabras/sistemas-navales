@@ -1,0 +1,22 @@
+@import '../../../../../../assets/sass/mixins.scss';
+@import '/infobox.scss';
+
+#map {
+  width: 100%;
+  height: calc(40vw + 19px);
+  z-index: 100;
+  position: absolute;
+  transition: .6s;
+  overflow: hidden;
+
+  /**** Phone ****/
+  @include phone {
+    height: calc(80vh + 5px);
+  }
+
+  /**** Tablet Portrait ****/
+  @include tablet-portrait {
+    // height: calc(100% + 19px);
+    height: 100vh;
+  }
+}
