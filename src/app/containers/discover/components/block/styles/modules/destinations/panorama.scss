@@ -26,7 +26,9 @@ Panorama Cover
   position: absolute;
   color: #fff;
   transition: opacity .6s ease-in;
-
+  background-image: url(/assets/images/discover/panorama.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   &:after {
     content: '';
     width: 100%;
